@@ -10,7 +10,7 @@ import (
 	"sort"
 )
 
-// Function to check if the slice is a valid permutation of 1 to n
+// check if the slice is a valid permutation of 1 to n
 func isValidPermutation(p []int, n int) bool {
 	seen := make([]bool, n+1) // Using n+1 for 1-based index
 	for _, num := range p {
@@ -22,7 +22,7 @@ func isValidPermutation(p []int, n int) bool {
 	return true // It's a valid permutation
 }
 
-// Function to find and display the next permutation
+// find and display the next permutation
 func nextPermutation(n int, p []int) {
 	// Step 1: Find the first element from the end that is smaller than its next element
 	i := n - 2
@@ -47,7 +47,6 @@ func nextPermutation(n int, p []int) {
 		sort.Ints(p[i+1:])
 	}
 
-	// Display the result
 	fmt.Print("Next permutation is: ")
 	for _, v := range p {
 		fmt.Printf("%d ", v)
@@ -55,7 +54,7 @@ func nextPermutation(n int, p []int) {
 	fmt.Println()
 }
 
-// Function to find and display the previous permutation
+// find and display the previous permutation
 func prevPermutation(n int, p []int) {
 	// Step 1: Find the first element from the end that is greater than its next element
 	i := n - 2
