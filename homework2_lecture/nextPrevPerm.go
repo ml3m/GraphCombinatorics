@@ -10,6 +10,7 @@ import (
 	"sort"
 )
 
+<<<<<<< HEAD
 // check if the slice is a valid permutation of 1 to n
 func isValidPermutation(p []int, n int) bool {
 	seen := make([]bool, n+1) // Using n+1 for 1-based index
@@ -23,6 +24,9 @@ func isValidPermutation(p []int, n int) bool {
 }
 
 // find and display the next permutation
+=======
+// Function to find and display the next permutation
+>>>>>>> 74d61dd (organisation)
 func nextPermutation(n int, p []int) {
 	// Step 1: Find the first element from the end that is smaller than its next element
 	i := n - 2

@@ -13,10 +13,13 @@ func factorial(n int) int {
     for i := 2; i <= n; i++ { result *= i }
     return result
 }
+
 func isPermutation(n int, p []int) bool {
     seen := make([]bool, n+1)
     for _, num := range p {
-        if num < 1 || num > n || seen[num] { return false }
+        if num < 1 || num > n || seen[num] { 
+            return false 
+        }
         seen[num] = true
     }
     return true
@@ -25,7 +28,7 @@ func isPermutation(n int, p []int) bool {
 // the rank is calculated by multiplying the count of smaller unseen numbers by
 // the factorial of the remaining numbers. 
 func rankPermutation(n int, p []int) int {
-    rank := 0
+    rank := 1
     seen := make([]bool, n+1)
 
     // the seen unseen thingy. 
@@ -39,9 +42,7 @@ func rankPermutation(n int, p []int) int {
         rank += count * factorial(n-i-1)
         seen[p[i]] = true
     }
-
-    // 1based rank
-    return rank + 1
+    return rank
 }
 
 func main() {

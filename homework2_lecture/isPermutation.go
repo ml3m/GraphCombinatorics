@@ -11,15 +11,14 @@ package main
 import (
 	"fmt"
 )
-
 func isPermutation(n int, p []int) {
     // track presence of numbers from 1 to n
     seen := make([]bool, n)
 
     for i := 0; i < n; i++ {
         // exit case
-        // If the number is out of range or already seen therefore -> it's 
-        // not a permutation
+        // If the number is out of range 
+        // or already seen therefore -> it's not a permutation
         if p[i] < 1 || p[i] > n || seen[p[i]-1] {
             fmt.Println("not a permutation")
             return

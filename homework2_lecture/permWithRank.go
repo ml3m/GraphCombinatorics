@@ -1,15 +1,18 @@
-/*4. permWithRank(int k, int n) which prints the permutation with rank k
-of {1, 2, . . . , n} in lexicographic order.package main*/
+/*
+4. permWithRank(int k, int n) which prints the permutation with rank k
+of {1, 2, . . . , n} in lexicographic order.package main
+*/
 package main
 
 import (
-    "fmt"
+	"fmt"
 )
 
 func factorial(n int) int {
-    result := 1
-    for i := 2; i <= n; i++ { result *= i }
-    return result
+    if n == 0 || n == 1{
+        return 1
+    }
+    return n * factorial(n-1)
 }
 
 func permWithRank(k, n int) {
@@ -22,10 +25,10 @@ func permWithRank(k, n int) {
     }
 
     result := []int{}
-    used := make([]bool, n+1) // for track used numbers
+    used := make([]bool, n+1) // for track of used numbers
 
     for i := 0; i < n; i++ {
-        factorialValue := factorial(n - i - 1) // calculate factorial of remaining positions
+        factorialValue := factorial(n - i - 1) // fact of remaining pos
         index := k / factorialValue //find the index of the current digit
         k %= factorialValue //updte k for the next position
 

@@ -18,6 +18,7 @@ func isValidPermutation(p []int, n int) bool {
 
 func nextPermutation(n int, p []int) {
 	// Step 1: Find the first element from the end that is smaller than its next element
+    // finding the pivot
 	i := n - 2
 	for i >= 0 && p[i] >= p[i+1] {
 		i--
