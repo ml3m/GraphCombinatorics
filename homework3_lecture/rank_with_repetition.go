@@ -5,7 +5,6 @@ import (
 	"math"
 )
 
-
 // calculates the rank for given permutation with repetition.
 func computeRank(permutation []int, n int) int {
 	r := len(permutation)

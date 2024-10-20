@@ -38,5 +38,4 @@ func main() {
 	}
 
 	next := nextPermutation(permutation, n)
-	fmt.Printf("The next permutation after %v is: %v\n", permutation, next)
-}
+	fmt.Printf("The next permutation after %v is: %v\n", permutation, next) }
