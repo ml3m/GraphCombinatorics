@@ -11,6 +11,7 @@ package main
 import (
 	"fmt"
 )
+// or the easy way is to just sort p and compare it with 1..n list
 func isPermutation(n int, p []int) {
     // track presence of numbers from 1 to n
     seen := make([]bool, n)
@@ -42,7 +43,6 @@ func main() {
         return
     }
 
-    // Create a slice of size n
     p := make([]int, n)
     fmt.Printf("Enter %d integers: ", n)
     for i := 0; i < n; i++ {
